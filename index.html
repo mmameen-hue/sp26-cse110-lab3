@@ -3,13 +3,32 @@
 <head>
     <title>Pomodoro Timer First Brainstorm</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="screenshots/W3 Validation(screenshot).png">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <style>
+        .internal-note {
+            background-color: #f4f4f4;
+            padding: 0.5rem;
+            border-left: 4px solid steelblue;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Pomodoro Timer First Brainstorm</h1>
+    <header id="top" class="page-header">
+        <h1 class="main-title">Pomodoro Timer First Brainstorm</h1>
         <h2>Brainstorming Meeting</h2>
-        <nav>
+        <nav class="nav-links">
             <a href="#attendance">Attendance</a>
             <a href="#agenda">Agenda</a>
             <a href="#media">Media</a>
@@ -18,21 +37,22 @@
     </header>
 
     <main>
-        <section>
+        <section class="card">
             <h2>Date</h2>
             <p>April 14, 2026</p>
+            <p class="internal-note">This paragraph uses the required internal CSS with the &lt;style&gt; tag.</p>
         </section>
 
-        <section id="attendance">
+        <section id="attendance" class="card" data-section="team">
             <h2>Attendance</h2>
-            <ul>
-                <li><strong>Mohammed Ameen</strong></li>
-                <li><b>Kishore Kumar</b></li>
-                <li><b>Amitah Bachan</b></li>
-            </ul>
+            <div class="attendance-flex">
+                <div class="member"><strong>Mohammed Ameen</strong></div>
+                <div class="member"><b>Kishore Kumar</b></div>
+                <div class="member"><b>Amitah Bachan</b></div>
+            </div>
         </section>
 
-        <section id="agenda">
+        <section id="agenda" class="card">
             <h2>Agenda</h2>
             <ol>
                 <li>Discuss the timer idea</li>
@@ -41,29 +61,37 @@
             </ol>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Unfinished Business</h2>
             <p>We still need to decide how the timer history should be stored.<br>We also need to finalize the homepage layout.</p>
         </section>
 
-        <section>
+        <section class="card special-section" data-status="important">
             <h2>New Business</h2>
             <p><em>The group discussed adding short break and long break options.</em></p>
+
+            <div class="ideas-grid">
+                <div class="idea-box">Short Break Timer</div>
+                <div class="idea-box">Long Break Timer</div>
+                <div class="idea-box">Task Labels</div>
+                <div class="idea-box">Dark Mode</div>
+            </div>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Miscellaneous Comments</h2>
             <h3>Questions and Concerns</h3>
             <p>We talked about keeping the interface simple and easy to use.</p>
             <hr>
-            <div>
+            <div class="comment-box">
                 <p>This <span>section</span> is included to satisfy the required HTML elements list.</p>
             </div>
+            <p style="color: darkred; font-weight: bold;">This sentence uses the required inline CSS example.</p>
         </section>
 
-        <section id="media">
+        <section id="media" class="card media-section">
             <h2>Diagram</h2>
-            <img src="screenshots/W3 Validation(screenshot).png" alt="Whiteboard sketch from the meeting">
+            <img src="screenshots/W3 Validation(screenshot).png" alt="Whiteboard sketch from the meeting" class="meeting-image">
 
             <h3>Audio Recording</h3>
             <audio controls>
@@ -76,7 +104,7 @@
             </video>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Additional Notes</h2>
             <details>
                 <summary>View meeting note</summary>
@@ -84,12 +112,12 @@
             </details>
         </section>
 
-        <section id="form">
+        <section id="form" class="card">
             <h2>Feedback Form</h2>
             <form>
                 <fieldset>
                     <p>Name:</p>
-                    <input type="text">
+                    <input type="text" placeholder="Enter your name">
 
                     <p>Date:</p>
                     <input type="date">
@@ -124,7 +152,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="card footer-card">
         <p>Meeting minutes prepared for Lab 2.</p>
     </footer>
 </body>
