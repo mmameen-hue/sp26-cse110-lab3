@@ -1,39 +1,38 @@
+/* Lab 3 CSS */
 
 * {
     box-sizing: border-box;
 }
 
-
 :root {
-    --page-bg: #f7f9fc;
-    --card-bg: #ffffff;
-    --accent: rgb(52, 120, 246);
-    --soft-color: hsl(210, 70%, 95%);
-    --main-text: #222222;
+    --page-bg: #111111;
+    --card-bg: #1c1c1c;
+    --accent: #aa0000;
+    --soft-color: #b3995d;
+    --main-text: #f5f5f5;
     --thick-border: 0.12in;
 }
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--page-bg, white);
-    color: var(--main-text, black);
+    background-color: var(--page-bg, #111111);
+    color: var(--main-text, #f5f5f5);
     margin: 0;
     padding: 0;
 }
 
-
 header {
-    background-color: color-mix(in srgb, lightblue 70%, white 30%);
+    background-color: color-mix(in srgb, #aa0000 75%, black 25%);
     text-align: center;
     padding: 16px 12px 16px 12px;
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 4px solid #b3995d;
 }
 
-
 .main-title {
-    color: orange;
+    color: #b3995d;
     text-decoration: underline;
     margin-top: 10px;
     margin-right: 0;
@@ -41,9 +40,8 @@ header {
     margin-left: 0;
 }
 
-
 h2, h3 {
-    color: hsl(220, 60%, 35%);
+    color: #b3995d;
 }
 
 .nav-links {
@@ -56,24 +54,24 @@ h2, h3 {
 
 .nav-links a {
     text-decoration: none;
-    color: #0b3d91;
-    background-color: var(--soft-color, #ddeeff);
+    color: #111111;
+    background-color: var(--soft-color, #b3995d);
     padding: 0.5rem 0.8rem;
     border-style: solid;
-    border-color: #7aa7ff;
+    border-color: #aa0000;
     border-width: 2px;
     border-radius: 8px;
     display: inline-block;
 }
 
 .nav-links a:hover {
-    background-color: #dbe9ff;
+    background-color: #8f7c48;
+    color: white;
 }
 
 .nav-links a:active {
-    background-color: #b8d2ff;
+    background-color: #6f6038;
 }
-
 
 main {
     width: 90%;
@@ -82,30 +80,26 @@ main {
     margin: 2rem auto;
 }
 
-
 section.card {
-    background-color: var(--card-bg, #ffffff);
-    border: 3px solid #d7d7d7;
+    background-color: var(--card-bg, #1c1c1c);
+    border: 3px solid #b3995d;
     border-radius: 12px;
     padding: 1rem 1.2rem 1rem 1.2rem;
     margin: 1rem 0 1rem 0;
 }
 
-
 #attendance {
-    background-color: color(display-p3 0.90 0.96 1 / 1);
+    background-color: #2a0000;
+    background-color: color(display-p3 0.35 0.05 0.05 / 1);
 }
-
 
 [data-status="important"] {
-    border-color: #ff9800;
+    border-color: #aa0000;
 }
-
 
 .card ul {
-    color: #333333;
+    color: #f5f5f5;
 }
-
 
 .media-section > img {
     display: block;
@@ -113,20 +107,19 @@ section.card {
     max-width: 500px;
     min-width: 200px;
     margin: 1rem auto;
+    border: 3px solid #b3995d;
+    border-radius: 10px;
 }
-
 
 h2 + p {
     text-align: left;
 }
 
-
 h2 ~ ul {
-    background-color: #fafafa;
+    background-color: #2a2a2a;
     padding: 1rem;
     border-radius: 8px;
 }
-
 
 .attendance-flex {
     display: flex;
@@ -141,9 +134,10 @@ h2 ~ ul {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background-color: rgba(190, 220, 255, 0.8);
+    background-color: rgba(170, 0, 0, 0.85);
+    color: #f5f5f5;
     border-style: dashed;
-    border-color: #666666;
+    border-color: #b3995d;
     border-width: 2px;
     border-radius: 10px;
     padding-top: 0;
@@ -151,7 +145,6 @@ h2 ~ ul {
     padding-bottom: 0;
     padding-left: 5px;
 }
-
 
 .ideas-grid {
     display: grid;
@@ -162,42 +155,43 @@ h2 ~ ul {
 }
 
 .idea-box {
-    background-color: #eef4ff;
-    border: 1mm solid #7ba5ff;
+    background-color: #111111;
+    border: 1mm solid #b3995d;
     padding: 12px;
     text-align: center;
+    color: #f5f5f5;
 }
-
 
 .comment-box {
-    color: #444444;
+    color: #f5f5f5;
     text-align: center;
     text-decoration: none;
-    background-color: hsla(48, 100%, 90%, 0.6);
+    background-color: hsla(45, 35%, 53%, 0.25);
     padding: 0.75rem;
     border-radius: 8px;
+    position: static;
+    border: 1px solid #b3995d;
 }
 
-
 button:hover {
-    background-color: #1f5fe0;
+    background-color: #850000;
     color: white;
 }
 
 button:active {
-    background-color: #163f94;
+    background-color: #5f0000;
 }
-
 
 fieldset {
     border-style: solid;
-    border-color: #bbbbbb;
+    border-color: #b3995d;
     border-width: 2px;
     border-radius: 10px;
     padding-top: 10px;
     padding-right: 12px;
     padding-bottom: 10px;
     padding-left: 12px;
+    background-color: #161616;
 }
 
 input, textarea, select {
@@ -205,10 +199,13 @@ input, textarea, select {
     max-width: 100%;
     padding: 0.5em;
     margin-bottom: 10px;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
+    border: 1px solid #b3995d;
 }
 
 button {
-    background-color: var(--accent, blue);
+    background-color: var(--accent, #aa0000);
     color: white;
     border: none;
     padding: 0.7rem 1rem;
@@ -216,7 +213,6 @@ button {
     cursor: pointer;
     display: inline-block;
 }
-
 
 audio {
     display: block;
@@ -226,6 +222,8 @@ audio {
 video {
     display: inline-block;
     margin-top: 1rem;
+    border: 2px solid #b3995d;
+    border-radius: 8px;
 }
 
 footer p {
@@ -236,11 +234,9 @@ footer p {
     display: none;
 }
 
-
 .meeting-image {
     height: auto;
 }
-
 
 .footer-card {
     position: relative;
@@ -250,17 +246,11 @@ footer p {
     position: sticky;
 }
 
-.comment-box {
-    position: static;
-}
-
-
 form:has(textarea:focus) {
-    border: 3px solid #4a90e2;
+    border: 3px solid #b3995d;
     padding: 0.8rem;
     border-radius: 10px;
 }
-
 
 .special-section {
     & h2 {
@@ -268,7 +258,7 @@ form:has(textarea:focus) {
     }
 
     & .idea-box {
-        color: #143d7a;
+        color: #b3995d;
     }
 }
 
